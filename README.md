@@ -1,6 +1,6 @@
 -Projet organisee
 -J'ai avance dans la premiere page (Portfolio)
-
+-API choisi "PokeAPI"
 
 
 
