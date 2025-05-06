@@ -8,16 +8,21 @@ export default function App() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${Count}`)
       .then(res => res.json())
       .then(data => setPokemonData(data))
+      console.log(pokemonData);
+      
   }, [Count])
 
   return (
     <div>
-      <h2>Le numéro est {Count}</h2>
+      <h2>ID: {Count}</h2>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>Afficher le prochain Pokémon</button>
 
       <div className="Data">
        {pokemonData && <h1>Name: {pokemonData.name}</h1>}
        {pokemonData && <img src={pokemonData.sprites.front_default} alt="" />}
+       <h1>type:</h1>
+       <h1>height:</h1>
+       <h1>weight:</h1>
 
       </div>
 
