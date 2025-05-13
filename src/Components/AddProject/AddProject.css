@@ -1,0 +1,70 @@
+body {
+    background-color: #586F7C; /* Couleur de l'arrière-plan global */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.add-portfolio {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    min-height: 300px;
+    background-color: #636161; /* Couleur de fond du formulaire */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.add-portfolio h1 {
+    text-align: center;
+    color: #f9f9f9; 
+    margin-bottom: 20px;
+}
+
+.add-portfolio form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-portfolio label {
+    font-size: 14px;
+    color: #f9f9f9; 
+    margin-bottom: 5px;
+}
+
+.add-portfolio input,
+.add-portfolio textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; 
+    background-color: #adadad; 
+    color: #333; 
+}
+
+.add-portfolio input:focus,
+.add-portfolio textarea:focus {
+    border-color: #4CAF50 !important; 
+    outline: none; 
+}
+
+.add-portfolio button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-portfolio button:hover {
+    background-color: #45a049; 
+}

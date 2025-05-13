@@ -20,7 +20,8 @@ export default function App() {
       <div className="Data">
        {pokemonData && <h1>Name: {pokemonData.name}</h1>}
        {pokemonData && <img src={pokemonData.sprites.front_default} alt="" />}
-       <h1>type:</h1>
+       {/* {pokemonData &&  <h1>type: {pokemonData.types.type.name}</h1> } */}
+       
        <h1>height:</h1>
        <h1>weight:</h1>
 

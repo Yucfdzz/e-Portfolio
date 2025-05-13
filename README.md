@@ -1,8 +1,9 @@
 -Projet organisee
--J'ai avance dans la premiere page (Portfolio)
+-page Portfolio fini
+-page addProject fini
 -API choisi "PokeAPI"
 
 
 
 
---Il me reste la parie Projects du Portfolio et les deux autres grandes parties
+--Il me reste l API
