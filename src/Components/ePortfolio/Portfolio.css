@@ -1,12 +1,16 @@
+
+
+/* https://css-tricks.com/ -> utilisee pour les animations*/
 .portfolio {
     padding: 20px;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    background-color: #586F7C;
+    background-color: #ffffff; 
+    color: #333333; 
 }
+
 
 .profile-section {
     display: flex;
@@ -14,44 +18,47 @@
     justify-content: center;
     gap: 40px;
     text-align: left;
-    background-color: #adadad;
-    width: 101vw; 
-    padding: 20px 0; 
-    box-sizing: border-box; 
-    margin-left: calc(-50vw + 50%); 
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-img {
     max-width: 200px;
     height: 200px;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #1b1b1b; 
+    border: 3px solid #4CAF50;
 }
 
 .profile-info {
     display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    gap: 20px; }
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
 
 .profile-info h1 {
     margin: 0;
     font-size: 28px;
-    color: #333;
+    color: #4CAF50; 
 }
 
 .profile-info pre {
     margin: 0;
-    font-size: 20px;
-    color: #555555;
+    font-size: 18px;
+    color: #555555; 
 }
 
 .profile-info h4 {
     margin: 0;
     font-size: 16px;
-    color: #6b6b6b;
+    color: #777777; 
 }
+
+
 .parcours-scolaire {
     display: flex;
     flex-direction: column;
@@ -64,80 +71,83 @@
 
 .parcours-container {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 
-/* //https://stackoverflow.com/questions utilisee pour quelques positionnement et animations */
 .parcours {
-    background-color: #B8DBD9;
+    background-color: #4CAF50; 
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
-    width: 250px; 
+    width: 250px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffffff; 
 }
 
 .parcours:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .parcours h4 {
     margin: 0 0 10px;
     font-size: 18px;
-    color: #333;
+    color: #ffffff; 
 }
 
 .parcours p {
     margin: 0;
     font-size: 14px;
-    color: #555;
+    color: #eeeeee; 
 }
 
-.project {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px; 
-    padding: 15px;
-    margin: 10px 0;
-    width: 200px; 
-    height: 200px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-}
-/* https://docs.astro.build/en/guides/styling/ */
+
 .project-list {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
-    padding: 20px 0; 
-    width: 100%; 
-    box-sizing: border-box; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.project {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333333; 
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project h2 {
     margin: 0 0 10px;
     font-size: 20px;
-    color: #333;
+    color: #4CAF50; 
 }
 
 .project p {
     margin: 0;
     font-size: 16px;
-    color: #555;
+    color: #555555; 
 }
