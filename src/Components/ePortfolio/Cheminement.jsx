@@ -1,5 +1,5 @@
 import './Portfolio.css'; 
-
+import '/src/App.css';
 
 export default function Cheminement() {
 

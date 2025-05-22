@@ -47,3 +47,38 @@ footer {
     background-color: #575757;
     border-radius: 4px;
 }
+
+
+/* Animation utilisee a laide de internet */
+
+.toggle-dark-mode {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-dark-mode:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+.toggle-dark-mode:active {
+    transform: scale(0.95); 
+}
+
+
+body.dark-mode .toggle-dark-mode {
+    background-color: #334155; 
+    color: #e2e8f0; 
+}
+
+body.dark-mode .toggle-dark-mode:hover {
+    background-color: #475569; 
+}

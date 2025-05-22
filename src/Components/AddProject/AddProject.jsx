@@ -1,5 +1,6 @@
 import React from 'react';
 import './AddProject.css'; 
+import '/src/App.css';
 
 export default function AddPortfolio({ onAddProject }) {
   const handleSubmit = (e) => {

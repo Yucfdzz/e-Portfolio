@@ -79,18 +79,3 @@ body {
     background-color: #45a049; 
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .add-portfolio {
-        padding: 15px;
-    }
-
-    .add-portfolio h1 {
-        font-size: 1.5rem;
-    }
-
-    .add-portfolio button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-}

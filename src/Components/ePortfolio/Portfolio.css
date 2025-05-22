@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff; 
+    background-color: #ffffff ; 
     color: #333333; 
 }
 
@@ -18,7 +18,7 @@
     justify-content: center;
     gap: 40px;
     text-align: left;
-    background-color: #f9f9f9;
+    background-color:#f9f9f9 ;
     width: 100%;
     padding: 20px;
     border-radius: 8px;
@@ -150,4 +150,72 @@
     margin: 0;
     font-size: 16px;
     color: #555555; 
+}
+
+/* Dark mode  */
+body.dark-mode {
+    background-color: #1e293b; 
+    color:#1e293b  ; 
+}
+
+.navbar.dark-mode {
+    background-color: #334155; 
+}
+
+.navbar-item a.dark-mode {
+    color: #e2e8f0; 
+}
+
+.navbar-item a.dark-mode:hover {
+    background-color: #475569; 
+}
+
+.header.dark-mode {
+    background-color: #334155; 
+    color: #e2e8f0; 
+}
+
+.footer.dark-mode {
+    background-color: #334155; 
+    color: #e2e8f0; 
+}
+
+.portfolio.dark-mode {
+    background-color:#1e293b ; 
+    color: #e2e8f0; 
+}
+
+.profile-section.dark-mode {
+    background-color: #273549 ; 
+    color: #e2e8f0; 
+    border: 1px solid #475569; 
+}
+
+.profile-info h1.dark-mode {
+    color: #38bdf8; 
+}
+
+.profile-info pre.dark-mode,
+.profile-info h4.dark-mode {
+    color: #94a3b8; 
+}
+
+.parcours.dark-mode {
+    background-color: #334155; 
+    color: #e2e8f0; 
+    border-color: #475569; 
+}
+
+.project.dark-mode {
+    background-color: #273549; 
+    color: #e2e8f0; 
+    border-color: #e2e8f0; 
+}
+
+.project h2.dark-mode {
+    color: #38bdf8; 
+}
+
+.project p.dark-mode {
+    color: #94a3b8; 
 }
