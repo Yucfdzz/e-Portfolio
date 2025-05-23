@@ -1,31 +1,24 @@
-# Projet Portfolio avec PokeAPI
+# 🚀 Projet Portfolio avec PokeAPI
 
-![Badge Statut](https://img.shields.io/badge/STATUT-EN%20DÉVELOPPEMENT-orange)
+![Badge Statut](https://img.shields.io/badge/STATUT-TERMINÉ-success)
 ![Badge API](https://img.shields.io/badge/API-PokeAPI-blue)
+![Badge Dark Theme](https://img.shields.io/badge/DARK%20THEME-OK-success)
 
-## 📝 Description
-Projet organisé de portfolio permettant d'afficher des projets et d'interagir avec la PokeAPI.
+## 🌟 Fonctionnalités complètes
+- **Portfolio** dynamique
+- Gestion de projets (**addProject**)
+- **Intégration PokeAPI** avancée
+- **Dark/Light theme** avec toggle
+- UI moderne et responsive
+- Performances optimisées
 
-## 🛠 Fonctionnalités implémentées
-- **Page Portfolio** complète et fonctionnelle
-- **Page addProject** opérationnelle
-- **Intégration de la PokeAPI** avec gestion des données
-- Interface responsive avec **CSS modernisé**
-- Design professionnel et cohérent
 
-## 📌 À faire / Améliorations prévues
-- [ ] Implémenter un **dark theme** avec toggle switch
-- [ ] Ajouter des animations CSS subtiles
 
-## 🚀 Technologies utilisées
-- Frontend: HTML5, CSS3, JavaScript
-- API: [PokeAPI](https://pokeapi.co/)
-- Outils: Git, GitHub
-
-## 📌 Points clés
-✔️ Architecture propre et bien organisée  
-✔️ Appels API optimisés  
-✔️ UI/UX soignée  
-✔️ Code documenté
-
-## 📦 Structure du projet
+## 🛠 Stack technique
+```mermaid
+pie
+    title Technologies
+    "HTML5" : 30
+    "CSS3" : 30
+    "JavaScript" : 30
+    "PokeAPI" : 10
