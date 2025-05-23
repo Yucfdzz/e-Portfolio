@@ -5,54 +5,56 @@ export default function App() {
   const [pokemonData, setPokemonData] = useState(null);
   const [currentId, setCurrentId] = useState(1);
   const [darkMode, setDarkMode] = useState(false); 
+  const [search, setSearch] = useState(null)
 
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.body.classList.toggle('dark-mode'); 
   };
-
+  
   const fetchPokemon = (id) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Pokémon non trouvé");
-                                                                // Catch error vus sur internet (on ne la pas vu dans le cours)
-        }
-        return res.json();
-      })
-      .then((data) => setPokemonData(data))
-      .catch(() => setPokemonData(null));
-  };
+     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+       .then((res) => {
+         if (!res.ok) {
+           throw new Error("Pokémon non trouvé");
+                                                                 // Catch error vus sur internet (on ne la pas vu dans le cours)
+         }
+         return res.json();
+       })
+       .then((data) => setPokemonData(data))
+       .catch(() => setPokemonData(null));
+   };
+
+  useEffect(() => {
+    currentId && fetchPokemon(currentId)
+    search && fetchPokemon(search)
+  }, [currentId, search])
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const search = formData.get("search");
-    if (search.trim() !== "") {
-      fetchPokemon(search.toLowerCase());
+    const searchText = formData.get("search");
+    if (searchText.trim() !== "") {
       setCurrentId(null);
+      setSearch(searchText.toLowerCase());
     }
     e.target.reset();
   };
 
   const handleNext = () => {
-    const nextId = currentId + 1;
-    setCurrentId(nextId);
-    fetchPokemon(nextId);
+    setCurrentId(prevId => prevId + 1);
+    // fetchPokemon(nextId);
   };
 
   const handlePrevious = () => {
     if (currentId > 1) {
-      const prevId = currentId - 1;
-      setCurrentId(prevId);
-      fetchPokemon(prevId);
+      setCurrentId(prevId => prevId -1);
+      // fetchPokemon(prevId);
     }
   };
 
-  useEffect(() => {
-    fetchPokemon(currentId);
-  }, [currentId]);
+
 
   return (
     <div className={`pokemon-container ${darkMode ? 'dark-mode' : ''}`}>
@@ -79,35 +81,37 @@ export default function App() {
 
       {pokemonData ? (
         <>
-      <img
+    <img
         className={`pokemon-image ${darkMode ? 'dark-mode' : ''}`}
             src={pokemonData.sprites.front_default}
             alt={pokemonData.name}
-       />
+      />
    <table className={`pokemon-stats ${darkMode ? 'dark-mode' : ''}`}>
-      <thead>
-          <tr>
-              <th className={darkMode ? 'dark-mode' : ''}>Statistique</th>
-                <th className={darkMode ? 'dark-mode' : ''}>Valeur</th>
-           </tr>
+    <thead>
+        <tr>
+          <th className={darkMode ? 'dark-mode' : ''}>Statistique</th>
+             <th className={darkMode ? 'dark-mode' : ''}>Valeur</th>
+        </tr>
       </thead>
-            <tbody>
-           <tr>
-                <td className={darkMode ? 'dark-mode' : ''}>Nom</td>
-                <td className={darkMode ? 'dark-mode' : ''}>{pokemonData.name}</td>
-         </tr>
-         <tr>
-                <td className={darkMode ? 'dark-mode' : ''}>Taille</td>
-                <td className={darkMode ? 'dark-mode' : ''}>{pokemonData.height}</td>
+       <tbody>
+        <tr>
+            <td className={darkMode ? 'dark-mode' : ''}>Nom</td>
+            <td className={darkMode ? 'dark-mode' : ''}>{pokemonData.name}</td>
+        </tr>
+        <tr>
+            <td className={darkMode ? 'dark-mode' : ''}>Taille</td>
+              <td className={darkMode ? 'dark-mode' : ''}>{pokemonData.height}</td>
          </tr>
            <tr>
                 <td className={darkMode ? 'dark-mode' : ''}>Poids</td>
                 <td className={darkMode ? 'dark-mode' : ''}>{pokemonData.weight}</td>
          </tr>
+
+         
          <tr>
-                <td className={darkMode ? 'dark-mode' : ''}>Types</td>
-                <td className={darkMode ? 'dark-mode' : ''}>
-                  {pokemonData.types.map((typeInfo) => typeInfo.type.name).join(", ")}
+           <td className={darkMode ? 'dark-mode' : ''}>Types</td>
+           <td className={darkMode ? 'dark-mode' : ''}>
+                  {pokemonData.types.map((Info) => Info.type.name).join(", ")}
            </td>
           </tr>
             </tbody>
